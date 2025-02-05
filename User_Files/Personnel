@@ -1,0 +1,61 @@
+Mes notes personnelles
+
+___________________
+
+Pour faire marcher le compilateur :
+
+PS C:\Users\mlour\Downloads\PROJETS\ASCENSEUR\Ascenseur> cd Source_Files
+PS C:\Users\mlour\Downloads\PROJETS\ASCENSEUR\Ascenseur\Source_Files> g++ -I"../Header_Files" "main.cpp" "Ascenseur.cpp" -o programme
+PS C:\Users\mlour\Downloads\PROJETS\ASCENSEUR\Ascenseur\Source_Files> .\programme.exe
+
+____________________
+
+Programme de base :
+
+int main ()
+{
+    cout << "Voici le programme d'un bel ascenseur !" << endl;
+    
+    srand(time(0));
+    int nombreAleatoire1 = rand() % 6;
+    int nombreAleatoire2 = rand() % 6;
+    
+    int etageAscenseur1 = nombreAleatoire1;
+    int etageAscenseur2 = nombreAleatoire2;
+    
+    int etageActuel = 0;
+    int etageVoulu = 0;
+    
+    
+    cout << "A quel étage sommes nous ?" << endl;
+    cin >> etageActuel;
+    
+    cout << "A quel étage voulons nous aller ?" << endl;
+    cin >> etageVoulu;
+    
+    cout << "Informations : " << endl;
+    cout << " - Etage actuel = " << etageActuel << endl;
+    cout << " - Etage voulu = " << etageVoulu << endl;
+    cout << " - Ascenseur 1 = " << etageAscenseur1 << endl;
+    cout << " - Ascenseur 2 = " << etageAscenseur2 << endl;
+    
+    int difference1 = abs(etageActuel - etageAscenseur1);
+    cout << difference1 << endl;
+    
+    int difference2 = abs(etageActuel - etageAscenseur2);
+    cout << difference2 << endl;
+
+
+    if (difference1 > difference2)
+    {
+        int ascenseurChoisi = 0;
+    }
+
+    return 0;
+}
+
+____________________
+
+...
+
+

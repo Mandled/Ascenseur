@@ -1,5 +1,4 @@
 #include "Ascenseur.h"
-
 #include <iostream>
 #include <string>
 #include <cstdlib>
@@ -36,7 +35,7 @@ void Ascenseur::setEtageAscenseur(int etageAleatoire)
     } 
     else 
     {
-        cout << "Erreur : L'étage doit être entre 0 et 6." << endl;
+        cout << "Erreur : L'etage doit etre entre 0 et 6." << endl;
     }
 }
 
