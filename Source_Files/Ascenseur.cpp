@@ -12,14 +12,12 @@ using namespace std;
 // Ascenseur::Ascenseur() : m_etageAscenseur(0) {}
 
 // Constructeur avec un étage aléatoire
-srand(time(0));
-int etageAleatoire = rand() % 6;
 Ascenseur::Ascenseur(int etageAleatoire) : m_etageAscenseur(etageAleatoire) {}
 
 // Affiche l'étage de l'ascenseur
 void Ascenseur::afficher() const 
 {
-    cout << "L'ascenseur est à l'étage " << m_etageAscenseur << "." << endl;
+    cout << "L'ascenseur est a l'etage " << m_etageAscenseur << "." << endl;
 }
 
 

@@ -24,7 +24,7 @@ public:
     // int selectionnerAscenseur() const;
     
     // Getter et Setter
-    int getEtageAcscenseur() const;
+    int getEtageAscenseur() const;
     void setEtageAscenseur(int etageAleatoire);
 
  

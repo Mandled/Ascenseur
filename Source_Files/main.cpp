@@ -58,23 +58,30 @@ int main ()
 
 int main ()
 {
+    srand(time(0)); 
+    int etageAleatoire = rand() % 7;
     // Création de deux ascenseurs à des étages differents
     Ascenseur ascenseur1(etageAleatoire);
     Ascenseur ascenseur2(etageAleatoire);
 
     // Affichage des étages
-    cout << "Ascenseur 1 : " << ascenseur1.afficher() << endl;
-    cout << "Ascenseur 2 : " << ascenseur2.afficher() << endl;
+    cout << "Ascenseur 1 : ";
+    ascenseur1.afficher();
+    cout << endl;
+    
+    cout << "Ascenseur 2 : ";
+    ascenseur2.afficher();
+    cout << endl;
 
     // Etage où nous sommes 
     int etageActuel;
-    cout << "A quel étage sommes nous ?" << endl;
+    cout << "A quel etage sommes nous ?" << endl;
     cin >> etageActuel;
     
     // Vérification étage valide
     if (etageActuel < 0 || etageActuel > 6) 
     {
-        cout << "Erreur : L'étage doit être entre 0 et 6." << endl;
+        cout << "Erreur : L'etage doit être entre 0 et 6." << endl;
         return 1;
     }
 
