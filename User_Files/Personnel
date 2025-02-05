@@ -4,9 +4,9 @@ ___________________
 
 Pour faire marcher le compilateur :
 
-PS C:\Users\mlour\Downloads\PROJETS\ASCENSEUR\Ascenseur> cd Source_Files
-PS C:\Users\mlour\Downloads\PROJETS\ASCENSEUR\Ascenseur\Source_Files> g++ -I"../Header_Files" "main.cpp" "Ascenseur.cpp" -o programme
-PS C:\Users\mlour\Downloads\PROJETS\ASCENSEUR\Ascenseur\Source_Files> .\programme.exe
+cd Source_Files
+g++ -I"../Header_Files" "main.cpp" "Ascenseur.cpp" -o programme
+.\programme.exe
 
 ____________________
 

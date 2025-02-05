@@ -13,11 +13,10 @@ using namespace std;
 
 int main ()
 {
-    srand(time(0)); 
-    int etageAleatoire = rand() % 7;
     // Création de deux ascenseurs à des étages differents
-    Ascenseur ascenseur1(etageAleatoire);
-    Ascenseur ascenseur2(etageAleatoire);
+    srand(time(0));
+    Ascenseur ascenseur1;
+    Ascenseur ascenseur2; 
 
     // Affichage des étages
     cout << "Ascenseur 1 : ";
@@ -30,15 +29,31 @@ int main ()
 
     // Etage où nous sommes 
     int etageActuel;
-    cout << "A quel etage sommes nous ?" << endl;
-    cin >> etageActuel;
+    do
+    {
+        cout << "A quel etage sommes nous ?" << endl;
+        cin >> etageActuel;
+
+        if (cin.fail())
+        {
+            cout << "Erreur 1 : Ce n'est pas un etage valide" << endl;
+            cin.clear();
+            cin.ignore(10000, '\n');
+        }
+        else if (etageActuel < 0 || etageActuel > 6) 
+        {
+            cout << "Erreur 2 : L'etage doit etre entre 0 et 6." << endl;
+        }  
+
+    }   while (etageActuel < 0 && etageActuel > 6 || cin.fail()); // Ca marchais pas pour les fail
+
     
     // Vérification étage valide
-    if (etageActuel < 0 || etageActuel > 6) 
-    {
-        cout << "Erreur : L'etage doit etre entre 0 et 6." << endl;
-        return 1;
-    }
+    // else if (etageActuel < 0 || etageActuel > 6) 
+    // {
+    //    cout << "Erreur 2 : L'etage doit etre entre 0 et 6." << endl;
+    //    return 1;
+    //}
 
     /*
     int etageVoulu;

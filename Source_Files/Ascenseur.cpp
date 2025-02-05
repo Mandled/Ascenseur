@@ -11,7 +11,11 @@ using namespace std;
 // Ascenseur::Ascenseur() : m_etageAscenseur(0) {}
 
 // Constructeur avec un étage aléatoire
-Ascenseur::Ascenseur(int etageAleatoire) : m_etageAscenseur(etageAleatoire) {}
+// Ascenseur::Ascenseur(int etageAleatoire) : m_etageAscenseur(etageAleatoire) {}
+Ascenseur::Ascenseur()
+{
+    m_etageAscenseur = rand() % 7;
+}
 
 // Affiche l'étage de l'ascenseur
 void Ascenseur::afficher() const 
